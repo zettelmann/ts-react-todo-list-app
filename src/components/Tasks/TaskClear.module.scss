@@ -1,0 +1,31 @@
+.container {
+  max-width: calc((2 * var(--base-unit)) + 54rem);
+  margin: 0 auto;
+  
+  div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: calc(2 * var(--base-unit));
+    margin: 0 var(--base-unit);
+    border-bottom-left-radius: var(--radius);
+    border-bottom-right-radius: var(--radius);
+
+    h3 {
+      padding: 2rem;
+      font-weight: 400;
+    }
+
+    button {
+      font: inherit;
+      color: inherit;
+      width: auto;
+      height: 4.2rem;
+      padding: 1.1rem 2rem;
+      background: none;
+      border: none;
+    }
+    
+  }
+}
+

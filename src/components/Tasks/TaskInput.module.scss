@@ -1,0 +1,15 @@
+.form {
+  max-width: calc((2 * var(--base-unit)) + 54rem);
+  margin: 0 auto;
+  height: calc(2 * var(--base-unit));
+
+  display: flex;
+
+  
+  input {
+    width: 100%;
+    margin: 0 var(--base-unit);
+    border-radius: var(--radius);
+    border: none;
+  }
+}
