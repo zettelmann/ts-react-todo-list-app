@@ -2,15 +2,15 @@ import React, { useContext } from 'react';
 import styles from './TaskItem.module.scss';
 import { ThemeContext } from '../context/theme-context';
 
-const TaskItem: React.FC<{ 
+interface TaskItemObj {
   text: string; 
   completed: boolean;
   onRemoveTask: () => void;
   onCompleteTask: () => void;
-}> = props => {
-  const themeContext = useContext(ThemeContext)
+}
 
-  console.log(props.completed);
+const TaskItem: React.FC<TaskItemObj> = props => {
+  const themeContext = useContext(ThemeContext)
 
   return (
     <li 

@@ -1,7 +1,7 @@
 import React, { useRef, useContext } from 'react';
 import styles from './TaskInput.module.scss';
 import { ThemeContext } from '../context/theme-context';
-import TaskContextProvider, { TaskContext } from '../context/task-context';
+import { TaskContext } from '../context/task-context';
 
 const TaskInput: React.FC = () => {
   const inputRef = useRef<HTMLInputElement>(null);

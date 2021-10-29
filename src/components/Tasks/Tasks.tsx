@@ -10,8 +10,8 @@ const Tasks = () => {
     <main className={styles.tasks}>
       <TaskContextProvider>
         <TaskInput />
-        <TaskList />
-        <TaskFilter />
+          <TaskList />
+          <TaskFilter />
       </TaskContextProvider>
       <p>Drag and drop to reorder list</p>
     </main>

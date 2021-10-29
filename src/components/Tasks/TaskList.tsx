@@ -5,21 +5,25 @@ import TaskClear from './TaskClear'
 
 import { TaskContext } from '../context/task-context';
 
-const DUMMY = [
- 'Complete online JavaScript course',
- 'Jog around the park 3x',
- '10 minutes meditation',
- 'Read for 1 hour',
- 'Pick up groceries',
- 'Todo App on Frontend Mentor'
-]
-
 const TaskList = () => {
   const taskContext = useContext(TaskContext);
+  let filteredTaskList = taskContext.tasks;
+
+  if(taskContext.filteredValue === 'all') {
+    filteredTaskList = taskContext.tasks;
+  }
+  if(taskContext.filteredValue === 'active') {
+    filteredTaskList = taskContext.tasks.filter(task => !task.completed);
+  }
+  if(taskContext.filteredValue === 'completed') {
+    filteredTaskList = taskContext.tasks.filter(task => task.completed)
+  }
   
+console.log(filteredTaskList);
+
   return (
     <div className={styles.container}>
-    <ul>{taskContext.tasks.map(task => (
+    <ul>{filteredTaskList.map(task => (
           <TaskItem 
             key={task.id}
             text={task.text}
