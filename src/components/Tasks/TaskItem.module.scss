@@ -11,11 +11,26 @@
   }
 }
 
+%circleHover {
+  height: 2rem;
+  width: 2rem;
+  border-radius: var(--radius);
+  background: var(--bg-gradient);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+}
+
 li {
+
   height: calc(2 * var(--base-unit));
 
   display: flex;
   align-items: center;
+
 
   &:first-child {
     border-top-left-radius: var(--radius);
@@ -28,10 +43,12 @@ li {
   }
 
   &.light {
+
     background: var(--clr-list--light);
     border-bottom: 1px solid var(--clr-stroke--light);
 
-    & > div {
+
+    div {
       @extend %circle;
       border: 1px solid var(--clr-stroke--light);
 
@@ -52,7 +69,7 @@ li {
     background: var(--clr-list--dark);
     border-bottom: 1px solid var(--clr-stroke--dark);
     
-    & > div {
+    div {
       @extend %circle;
       border: 1px solid var(--clr-stroke--dark);
     }
@@ -76,22 +93,31 @@ li {
   }
 }
 
-li:hover div {
-    height: 2rem;
-    width: 2rem;
-    border-radius: var(--radius);
-    background: var(--bg-gradient);
+li {
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-
-    div {
-      height: 1.2rem;
-      width:  1.2rem;
-      border-radius: inherit;
-      background: #fff;
+  &.light:hover div {
+      @extend %circleHover;
+  
+      &::after {
+        content: '';
+        height: 1.4rem;
+        width:  1.4rem;
+        border-radius: inherit;
+        background: var(--clr-list--light);
+      }
     }
-  }
+
+  &.dark:hover div {
+    @extend %circleHover;
+  
+      &::after {
+        content: '';
+        height: 1.4rem;
+        width:  1.4rem;
+        border-radius: inherit;
+        background: var(--clr-list--dark);
+      }
+    }
+
+}
 

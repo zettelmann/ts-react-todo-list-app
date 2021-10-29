@@ -27,7 +27,7 @@ header {
   }
   
   &.light {
-    background: url('../../assets/bg-mobile-light.jpg') no-repeat center / cover ;
+    background: url('../../assets/bg-mobile-light.jpg') no-repeat center / cover;
  
     button {
       @extend %button;
@@ -36,7 +36,7 @@ header {
   }
   
   &.dark {
-    background: url('../../assets/bg-mobile-dark.jpg') no-repeat center;
+    background: url('../../assets/bg-mobile-dark.jpg') no-repeat center / cover;
     
     button {
       @extend %button;

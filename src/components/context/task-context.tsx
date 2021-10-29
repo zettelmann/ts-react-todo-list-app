@@ -6,13 +6,15 @@ type TaskObj = {
   addTask: (taskInput: string) => void;
   removeTask: (id: string) => void;
   completeTask: (id: string) => void;
+  clearTasks: () => void;
 };
 
 export const TaskContext = React.createContext<TaskObj>({
   tasks: [],
   addTask: () => {},
   removeTask: () => {},
-  completeTask: () => {}
+  completeTask: () => {},
+  clearTasks: () => {}
 });
 
 const TaskContextProvider: React.FC = props => {
@@ -37,13 +39,17 @@ const TaskContextProvider: React.FC = props => {
     ))
   }
 
-  console.log(taskList);
+  const clearTaskHandler = () => {
+    setTaskList([]);
+  }
+
 
   const contextValue = {
     tasks: taskList,
     addTask: addTaskHandler,
     removeTask: removeTaskHandler,
-    completeTask: completeTaskHandler
+    completeTask: completeTaskHandler,
+    clearTasks: clearTaskHandler
   }
 
   return (

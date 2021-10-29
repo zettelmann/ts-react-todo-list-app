@@ -17,9 +17,7 @@ const TaskItem: React.FC<{
       className={styles[`${themeContext.theme}`]}
       onClick={props.onCompleteTask}
     >
-      <div className={props.completed ? `${styles.completed}` : ''}>
-        <div />
-      </div>
+      <div className={props.completed ? `${styles.completed}` : ''} />
       <h2 className={props.completed ? `${styles.completed}` : ''}>{props.text}</h2>
       <button onClick={props.onRemoveTask} />
     </li>
