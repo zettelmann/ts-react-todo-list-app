@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import styles from './TaskList.module.scss';
 import TaskItem from './TaskItem'
 import TaskClear from './TaskClear'
 
+import { TaskContext } from '../context/task-context';
 
 const DUMMY = [
  'Complete online JavaScript course',
@@ -14,13 +15,17 @@ const DUMMY = [
 ]
 
 const TaskList = () => {
+  const taskContext = useContext(TaskContext);
   
   return (
     <div className={styles.container}>
-    <ul>{DUMMY.map(item => (
+    <ul>{taskContext.tasks.map(task => (
           <TaskItem 
-            key={Math.random().toString()}
-            text={item}
+            key={task.id}
+            text={task.text}
+            completed={task.completed}
+            onRemoveTask={taskContext.removeTask.bind(null, task.id)}
+            onCompleteTask={taskContext.completeTask.bind(null, task.id)}
           />
         ))}
     </ul>
@@ -31,3 +36,4 @@ const TaskList = () => {
 }
 
 export default TaskList
+

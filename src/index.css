@@ -1,6 +1,7 @@
 :root {
   --font: 'Josefin Sans', sans-serif;
 
+  --bg-gradient: linear-gradient(135deg, rgb(87, 221, 255), rgb(192, 88, 243));
   --base-unit: 2.4rem;
   --radius: 10px;
 
@@ -8,6 +9,7 @@
   --clr-stroke--light: #E3E4F1;
   --clr-font-primary--light: #9495A5;
   --clr-font-secondary--light: #494C6B;
+  --clr-font-completed--light: #D1D2DA;
 
   --clr-list--light: #fff;
   
@@ -15,6 +17,8 @@
   --clr-stroke--dark: #4D5067;
   --clr-font-primary--dark: #5B5E7E;
   --clr-font-secondary--dark: #C8CBE7;
+  --clr-font-completed--dark: #4D5067;
+
   
   --clr-list--dark: #25273D;
 }

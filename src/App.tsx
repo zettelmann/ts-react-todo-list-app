@@ -1,21 +1,20 @@
-import { useState } from 'react';
-import styles from './App.module.scss';
+import React, { useContext } from 'react';
 import Header from './components/layout/Header';
 import Tasks from './components/Tasks/Tasks';
+import styles from './App.module.scss'
+import { ThemeContext } from './components/context/theme-context';
 
-const App: React.FC = () => {
-  const [theme, setTheme] = useState<string>('light')
+const App = () => {
+  const themeContext = useContext(ThemeContext)
 
-  const setThemeHandler = (theme: string) => {
-    setTheme(theme)
-  }
-  
   return (
-    <div className={styles[`theme--${theme}`]}>
-      <Header onSetTheme={setThemeHandler} />
+    <div className={styles[`${themeContext.theme}`]}>
+      <Header />
       <Tasks />
     </div>
   );
 }
 
 export default App;
+
+

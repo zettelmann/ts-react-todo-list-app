@@ -1,25 +1,69 @@
-.item {
+%circle {
+  margin-left: calc(var(--base-unit) * 0.8325);
+  width: 2rem; 
+  height: 2rem; 
+  border-radius: var(--radius);
+
+  &.completed {
+    height: 2rem;
+    width: 2rem;
+    background: url('../../assets/icon-check.svg') 51% 56% no-repeat, var(--bg-gradient) ;
+  }
+}
+
+li {
   height: calc(2 * var(--base-unit));
 
   display: flex;
   align-items: center;
-
 
   &:first-child {
     border-top-left-radius: var(--radius);
     border-top-right-radius: var(--radius);
   }
 
-  div {
-    margin-left: calc(var(--base-unit) * 0.8325);
-    width: 2rem; 
-    height: 2rem; 
-    border-radius: var(--radius);
-  }
-
   h2 {
     margin-left: calc(var(--base-unit) / 2);
     margin-right: auto;
+  }
+
+  &.light {
+    background: var(--clr-list--light);
+    border-bottom: 1px solid var(--clr-stroke--light);
+
+    & > div {
+      @extend %circle;
+      border: 1px solid var(--clr-stroke--light);
+
+
+    }
+
+    h2 {
+      color: var(--clr-font-secondary--light);
+
+      &.completed {
+        text-decoration: line-through;
+        color: var(--clr-font-completed--light);
+      }
+    }
+  }
+
+  &.dark {
+    background: var(--clr-list--dark);
+    border-bottom: 1px solid var(--clr-stroke--dark);
+    
+    & > div {
+      @extend %circle;
+      border: 1px solid var(--clr-stroke--dark);
+    }
+    h2 {
+      color: var(--clr-font-secondary--dark);
+      
+      &.completed {
+        text-decoration: line-through;
+        color: var(--clr-font-completed--dark);
+      }
+    }
   }
 
   button {
@@ -31,3 +75,23 @@
     background-size: 1.2rem;
   }
 }
+
+li:hover div {
+    height: 2rem;
+    width: 2rem;
+    border-radius: var(--radius);
+    background: var(--bg-gradient);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    div {
+      height: 1.2rem;
+      width:  1.2rem;
+      border-radius: inherit;
+      background: #fff;
+    }
+  }
+

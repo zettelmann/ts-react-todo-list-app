@@ -1,79 +1,13 @@
-
-
-.theme {
-  &--light {
-    height: 100vh;
-    color: var(--clr-font-primary--light);
-    background: var(--clr-bg--light);
-
-    header {
-      background: url('./assets/bg-mobile-light.jpg');
-
-      button {
-        background: no-repeat center url('./assets/icon-moon.svg');
-      }
-    }
-
-    h2 {
-      color: var(--clr-font-secondary--light);
-    }
-
-    li,
-    input {
-      background: var(--clr-list--light);
-      border-bottom: 1px solid var(--clr-stroke--light);
-
-      div {
-        border: 1px solid var(--clr-stroke--light);
-      }
-    }
-    // Clear Component
-    div div div {
-      background: var(--clr-list--light);
-    }
-    // Filter Component
-    div + div > div:last-child  {
-      background: var(--clr-list--light);
-    }
-  }
-  &--dark {
-    height: 100vh;
-
-    color: var(--clr-font-primary--dark);
-    background: var(--clr-bg--dark);
-
-    
-    header {
-      background: url('./assets/bg-mobile-dark.jpg');
-
-      button {
-        background: no-repeat center url('./assets/icon-sun.svg');
-      }
-    }
-
-    h2 {
-      color: var(--clr-font-secondary--dark);
-    }
-
-    li,
-    input {
-      background: var(--clr-list--dark);
-      border-bottom: 1px solid var(--clr-stroke--dark);
-
-      div {
-        border: 1px solid var(--clr-stroke--dark);
-
-      }
-    }
-    // Clear Component
-    div div div {
-      background: var(--clr-list--dark);
-    }
-    // Filter Component
-    div + div > div:last-child  {
-      background: var(--clr-list--dark);
-    }
-
-  }
-
+.light {
+  height: 100vh;
+  color: var(--clr-font-primary--light);
+  background: var(--clr-bg--light);
 }
+
+.dark {
+  height: 100vh;
+
+  color: var(--clr-font-primary--dark);
+  background: var(--clr-bg--dark);
+}
+

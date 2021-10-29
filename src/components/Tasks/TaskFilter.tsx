@@ -1,15 +1,17 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import styles from './TaskFilter.module.scss';
+import { ThemeContext } from '../context/theme-context';
 
 const TaskFilter = () => {
+  const themeContext = useContext(ThemeContext)
   return (
-    <div className={styles.container}>
-      <div className="card">
+    <section className={styles[`${themeContext.theme}`]}>
+      <div>
         <button>All</button>
         <button>Active</button>
         <button>Completed</button>
       </div>
-    </div>
+    </section>
   )
 }
 
