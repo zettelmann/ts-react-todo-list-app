@@ -8,7 +8,17 @@
   font-weight: 600;
   margin-top: var(--base-unit);
   box-shadow: var(--shaddow);
+}
 
+%button {
+  cursor: pointer;
+  font: inherit;
+  color: inherit;
+  width: auto;
+  height: 4.2rem;
+  padding: 1.1rem 2rem;
+  background: none;
+  border: none;
 }
 
 section {
@@ -20,6 +30,17 @@ section {
       @extend %container;
       background: var(--clr-list--light);
     }
+
+    button {
+      @extend %button;
+      &:hover {
+        color: var(--clr-font-secondary--light);
+      }
+  
+      &.selected {
+        color: var(--bg-active);
+      }
+    }
   }
 
   &.dark {
@@ -27,19 +48,23 @@ section {
       @extend %container;
       background: var(--clr-list--dark);
     }
-  }
-
-
-  input {
-      font: inherit;
-      color: inherit;
-      width: auto;
-      padding: 1.1rem;
-      background: none;
-      border: none;
+    button {
+      @extend %button;
+      &:hover {
+        color: var(--clr-font-secondary--dark);
+      }
+  
+      &.selected {
+        color: var(--bg-active);
+      }
     }
   }
+
+}
+
+
 
 
 
   
+

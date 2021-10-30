@@ -12,7 +12,7 @@ interface TaskItemObj {
 }
 
 const getItemStyle = (isDragging: boolean, draggableStyle: any) => ({
-  background: isDragging ? 'var(--bg-active)' : '',
+  outline: isDragging ? '2px solid var(--bg-active)' : '',
   borderRadius: isDragging ? '0px' : 'var(--radius)',
   transform: isDragging ? '0px' : '',
   boxShadow: isDragging ? 'var(--shaddow)' : '',
@@ -33,7 +33,8 @@ const TaskItem: React.FC<TaskItemObj> = props => {
       className={styles[`${themeContext.theme}`]}
       onClick={props.onCompleteTask}
     >
-      <div className={props.completed ? `${styles.completed}` : ''} />
+
+      <span className={props.completed ? `${styles.completed}` : ''} />
       <h2 className={props.completed ? `${styles.completed}` : ''}>{props.text}</h2>
       <button onClick={props.onRemoveTask} />
     </li>

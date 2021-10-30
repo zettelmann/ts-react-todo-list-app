@@ -5,19 +5,30 @@ import { TaskContext } from '../context/task-context';
 
 const TaskFilter = () => {
   const themeContext = useContext(ThemeContext);
-  const taskContext = useContext(TaskContext);
+  const { filterTasks, filteredValue } = useContext(TaskContext);
 
   const setFilterHandler = (e: React.MouseEvent<HTMLButtonElement>) => {
-
-    taskContext.filterTasks(e.currentTarget.value)
+    filterTasks(e.currentTarget.value)
   }
 
   return (
     <section className={styles[`${themeContext.theme}`]}>
       <div>
-        <button value="all" onClick={setFilterHandler}>All</button>
-        <button value="active" onClick={setFilterHandler}>Active</button>
-        <button value="completed" onClick={setFilterHandler}>Completed</button>
+        <button 
+          value="all" 
+          onClick={setFilterHandler}
+          className={filteredValue === 'all' ? `${styles.selected}` : ''}
+        >All</button>
+        <button 
+          value="active"
+          onClick={setFilterHandler}
+          className={filteredValue === 'active' ? `${styles.selected}` : ''}
+        >Active</button>
+        <button 
+          value="completed" 
+          onClick={setFilterHandler}
+          className={filteredValue === 'completed' ? `${styles.selected}` : ''}
+        >Completed</button>
       </div>
     </section>
   )

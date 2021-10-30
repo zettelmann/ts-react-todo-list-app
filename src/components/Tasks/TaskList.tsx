@@ -52,6 +52,7 @@ const TaskList = () => {
                     )}
                   </Draggable>
                   ))}
+                  {provided.placeholder}
             </ul>
           )}
           </Droppable>

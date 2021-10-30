@@ -6,10 +6,13 @@ import TaskList from './TaskList'
 import TaskContextProvider from '../context/task-context';
 
 const Tasks = () => {
+
+
   return (
     <main className={styles.tasks}>
       <TaskContextProvider>
         <TaskInput />
+        <section></section>
           <TaskList />
           <TaskFilter />
       </TaskContextProvider>

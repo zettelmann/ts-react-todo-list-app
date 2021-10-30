@@ -16,14 +16,17 @@ const TaskInput: React.FC = () => {
     if(inputTask.trim().length === 0) return;
 
     taskContext.addTask(inputTask);
+    inputRef.current!.value = ''
   }
 
   return (
     <form 
       className={styles[`${themeContext.theme}`]}
       onSubmit={submitHandler}
-   >
+    >  
+   <span></span>
       <input 
+        placeholder="Create a new todo..."
         type="text" 
         ref={inputRef}
       />

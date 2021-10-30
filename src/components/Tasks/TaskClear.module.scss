@@ -8,6 +8,17 @@
   box-shadow: var(--shaddow);
 }
 
+%button {
+  cursor: pointer;
+  font: inherit;
+  color: inherit;
+  width: auto;
+  height: 4.2rem;
+  padding: 1.1rem 2rem;
+  background: none;
+  border: none;
+}
+
 
 section {
   max-width: calc((2 * var(--base-unit)) + 54rem);
@@ -18,12 +29,25 @@ section {
       @extend %container;
       background: var(--clr-list--light);
     }
+
+    button {
+      @extend %button;
+      &:hover {
+        color: var(--clr-font-secondary--light);
+      }
+    }
   }
 
   &.dark {
     div {
       @extend %container;
       background: var(--clr-list--dark);
+    }
+    button {
+      @extend %button;
+      &:hover {
+        color: var(--clr-font-secondary--dark);
+      }
     }
   }
 
@@ -32,13 +56,5 @@ section {
     font-weight: 400;
   }
 
-  button {
-    font: inherit;
-    color: inherit;
-    width: auto;
-    height: 4.2rem;
-    padding: 1.1rem 2rem;
-    background: none;
-    border: none;
-  }
+
 }

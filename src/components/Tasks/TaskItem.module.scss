@@ -5,8 +5,6 @@
   border-radius: 100%;
 
   &.completed {
-    height: 2rem;
-    width: 2rem;
     background: url('../../assets/icon-check.svg') 51% 56% no-repeat, var(--bg-gradient) ;
   }
 }
@@ -20,12 +18,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
-
 }
 
 li {
-
   height: calc(2 * var(--base-unit));
 
   display: flex;
@@ -48,10 +43,9 @@ li {
     border-bottom: 1px solid var(--clr-stroke--light);
 
 
-    div {
+    span {
       @extend %circle;
       border: 1px solid var(--clr-stroke--light);
-
 
     }
 
@@ -69,7 +63,7 @@ li {
     background: var(--clr-list--dark);
     border-bottom: 1px solid var(--clr-stroke--dark);
     
-    div {
+    span {
       @extend %circle;
       border: 1px solid var(--clr-stroke--dark);
     }
@@ -95,26 +89,26 @@ li {
 
 li {
 
-  &.light:hover div {
+  &.light:hover span {
       @extend %circleHover;
   
       &::after {
         content: '';
         height: 1.4rem;
         width:  1.4rem;
-        border-radius: inherit;
+        border-radius: 100%;
         background: var(--clr-list--light);
       }
     }
 
-  &.dark:hover div {
+  &.dark:hover span {
     @extend %circleHover;
   
       &::after {
         content: '';
         height: 1.4rem;
         width:  1.4rem;
-        border-radius: inherit;
+        border-radius: 100%;
         background: var(--clr-list--dark);
       }
     }
