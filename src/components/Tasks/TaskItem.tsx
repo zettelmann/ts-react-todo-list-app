@@ -13,7 +13,7 @@ interface TaskItemObj {
 
 const getItemStyle = (isDragging: boolean, draggableStyle: any) => ({
   outline: isDragging ? '2px solid var(--bg-active)' : '',
-  borderRadius: isDragging ? '0px' : 'var(--radius)',
+  borderRadius: 'var(--radius)',
   transform: isDragging ? '0px' : '',
   boxShadow: isDragging ? 'var(--shaddow)' : '',
 

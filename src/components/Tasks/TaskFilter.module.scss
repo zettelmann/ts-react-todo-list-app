@@ -25,7 +25,7 @@
 
 @mixin buttonLargeBreakpoint {
   position: absolute;
-  top: calc(var(--base-unit) * -3);
+  top: calc(var(--base-unit) * -3.375);
   left: 50%;
   transform: translateX(-100%);
   background: none;
@@ -43,7 +43,6 @@ section {
       @extend %container;
       background: var(--clr-list--light);
       box-shadow: var(--shaddow--light);
-
 
       @media (min-width: $bp-large) {
         @include buttonLargeBreakpoint;

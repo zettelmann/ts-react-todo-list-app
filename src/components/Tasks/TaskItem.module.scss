@@ -1,3 +1,5 @@
+@import '../../breakpoints.scss';
+
 %circle {
   margin-left: calc(var(--base-unit) * 0.8325);
   width: 2rem; 
@@ -21,11 +23,29 @@
   align-items: center;
 }
 
+%button {
+  width: 4.8rem;
+  height: 4.2rem;
+  border: none;
+  cursor: pointer;
+
+  background: no-repeat center url('../../assets/icon-cross.svg');
+  background-size: 1.2rem;
+
+  @media (min-width: $bp-large) {
+    background-size: 15rem;
+  }
+}
+
 li {
   height: calc(2 * var(--base-unit));
 
   display: flex;
   align-items: center;
+
+  @media (min-width: $bp-large) {
+    height: calc(2.75 * var(--base-unit));
+  }
 
 
   &:first-child {
@@ -79,13 +99,10 @@ li {
   }
 
   button {
-    width: 4.8rem;
-    height: 4.2rem;
-    border: none;
-    cursor: pointer;
-
-    background: no-repeat center url('../../assets/icon-cross.svg');
-    background-size: 1.2rem;
+    @extend %button;
+    @media (min-width: $bp-large) {
+      display: none;
+    }
 
   }
 }
@@ -113,5 +130,23 @@ li {
         background: var(--clr-list--dark);
       }
     }
+
+    &:hover {
+      button {
+        @extend %button;
+        @media (min-width: $bp-large) {
+
+          display: block;
+          width: 4.8rem;
+          height: 4.2rem;
+          border: none;
+          cursor: pointer;
+      
+          background: no-repeat center url('../../assets/icon-cross.svg');      
+        }
+      }
+    }
 }
+
+
 

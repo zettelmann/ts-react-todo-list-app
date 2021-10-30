@@ -17,7 +17,7 @@
   --clr-list--light: #fff;
   
   --clr-bg--dark: #171823;
-  --clr-stroke--dark: #4D5067;
+  --clr-stroke--dark: #393A4B;
   --clr-font-primary--dark: #5B5E7E;
   --clr-font-secondary--dark: #C8CBE7;
   --clr-font-completed--dark: #4D5067;
@@ -55,7 +55,7 @@ body {
   font-family: var(--font);
   font-weight: 400;
   line-height: 1.8;
-  font-size: clamp(1.2rem, 1.3vw, 1.8rem);
+  font-size: clamp(1.2rem, 3vw, 1.8rem);
 }
 
 li {

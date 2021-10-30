@@ -1,8 +1,15 @@
+@import '../../breakpoints.scss';
+
 %container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: calc(2 * var(--base-unit));
+
+  @media (min-width: $bp-large) {
+    height: calc(2.75 * var(--base-unit));
+  }
+
   margin: 0 var(--base-unit);
   border-radius: var(--radius);
 }

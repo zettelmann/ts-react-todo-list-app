@@ -1,5 +1,11 @@
+@import '../../breakpoints.scss';
+
 .tasks {
   margin-top: calc(var(--base-unit) * -4);
+
+  @media (min-width: $bp-large) {
+    margin-top: calc(var(--base-unit) * -5.2);
+  }
   
   p {
     text-align: center;
@@ -9,9 +15,13 @@
  
   .welcome {
     text-align: center;
-    margin: calc(var(--base-unit) * 3) auto;
+    margin: calc(var(--base-unit) * 4) auto;
     max-width: 54rem;
 
+    @media (min-width: $bp-large) {
+      margin: calc(var(--base-unit) * 5) auto;
+
+    }
 
     h2 {
       text-transform: uppercase;

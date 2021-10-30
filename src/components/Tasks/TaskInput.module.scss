@@ -1,3 +1,5 @@
+@import '../../breakpoints.scss';
+
 %circle {
   position: absolute;
   top: calc(var(--base-unit) * .55);
@@ -5,6 +7,9 @@
   height: 20px;
   width: 20px;
   border-radius: 100%;
+  @media (min-width: $bp-large) {
+    top: calc(var(--base-unit) * .9);
+  }
 }
 
 %input {
@@ -26,6 +31,9 @@ form {
   display: flex;
   position: relative;
 
+  @media (min-width: $bp-large) {
+    height: calc(2.75 * var(--base-unit));
+  }
 
   
   &.light {

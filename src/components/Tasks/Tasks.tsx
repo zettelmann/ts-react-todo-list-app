@@ -23,7 +23,7 @@ const Tasks: React.FC = () => {
         <section className={styles.welcome}>
           <h2>Features</h2>
           <h3>Create a simple to-do list</h3>
-          <p> Keep your list organized with the ability to mark task as complete, delete them from the list, filter them, drag and drop them to reorder tasks on the list or toggle between light and dark mode. </p>
+          <p>Keep your list organized with the ability to mark task as complete, delete them from the list, filter them, drag and drop them to reorder tasks on the list or toggle between light and dark mode. Optimized for desktop, tablet or mobile devices.</p>
         </section>
       )}
     </main>
