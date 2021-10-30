@@ -1,3 +1,5 @@
+@import '../../breakpoints.scss';
+
 %container {
   display: flex;
   justify-content: center;
@@ -19,9 +21,21 @@
   padding: 1.1rem 2rem;
   background: none;
   border: none;
+  transition: var(--transition);
+}
+
+@mixin buttonLargeBreakpoint {
+  position: absolute;
+  top: calc(var(--base-unit) * -3);
+  left: 50%;
+  transform: translateX(-100%);
+  background: none;
+  box-shadow: none;
+  width: 50px;
 }
 
 section {
+  position: relative;
   max-width: calc((2 * var(--base-unit)) + 54rem);
   margin: 0 auto;
 
@@ -29,6 +43,10 @@ section {
     div {
       @extend %container;
       background: var(--clr-list--light);
+
+      @media (min-width: $bp-large) {
+        @include buttonLargeBreakpoint;
+      }
     }
 
     button {
@@ -47,6 +65,10 @@ section {
     div {
       @extend %container;
       background: var(--clr-list--dark);
+
+      @media (min-width: $bp-large) {
+        @include buttonLargeBreakpoint;
+      }
     }
     button {
       @extend %button;

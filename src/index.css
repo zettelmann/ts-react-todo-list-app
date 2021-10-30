@@ -6,6 +6,7 @@
   --base-unit: 2.4rem;
   --radius: 5px;
   --shaddow: 0 35px 25px -18px #4c4c553a;
+  --transition: all .3s ease-in;
 
   --clr-bg--light: #F2F2F2;
   --clr-stroke--light: #E3E4F1;
@@ -21,6 +22,7 @@
   --clr-font-completed--dark: #4D5067;
   --clr-list--dark: #25273D;
 
+  
 }
 
 * {

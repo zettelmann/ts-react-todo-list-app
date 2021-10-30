@@ -1,4 +1,7 @@
+@import '../../breakpoints.scss';
+
 %button {
+  cursor: pointer;
   width: 4.2rem;
   height: 4.2rem;
   padding: 1.1rem;
@@ -28,20 +31,29 @@ header {
   }
   
   &.light {
-    background: url('../../assets/bg-mobile-light.jpg') no-repeat center / cover;
+    background: url('../../assets/bg-mobile-light.jpg') no-repeat top / cover;
+
+    @media (min-width: $bp-medium) {
+      background: url('../../assets/bg-desktop-light.jpg') no-repeat top / cover;
+    }
  
     button {
       @extend %button;
       background: url('../../assets/icon-moon.svg') no-repeat center;
+      transition: var(--transition);
     }
   }
   
   &.dark {
-    background: url('../../assets/bg-mobile-dark.jpg') no-repeat center / cover;
+    background: url('../../assets/bg-mobile-dark.jpg') no-repeat top / cover;
     
+    @media (min-width: $bp-medium) {
+      background: url('../../assets/bg-desktop-dark.jpg') no-repeat top / cover;
+    }
     button {
       @extend %button;
       background: no-repeat center url('../../assets/icon-sun.svg');
+      transition: var(--transition);
     }
   }
 }

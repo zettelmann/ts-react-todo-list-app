@@ -4,6 +4,7 @@
   height: 2rem; 
   border-radius: 100%;
 
+
   &.completed {
     background: url('../../assets/icon-check.svg') 51% 56% no-repeat, var(--bg-gradient) ;
   }
@@ -81,17 +82,18 @@ li {
     width: 4.8rem;
     height: 4.2rem;
     border: none;
+    cursor: pointer;
 
     background: no-repeat center url('../../assets/icon-cross.svg');
     background-size: 1.2rem;
+
   }
 }
 
 li {
-
   &.light:hover span {
       @extend %circleHover;
-  
+
       &::after {
         content: '';
         height: 1.4rem;
@@ -103,7 +105,6 @@ li {
 
   &.dark:hover span {
     @extend %circleHover;
-  
       &::after {
         content: '';
         height: 1.4rem;
@@ -112,6 +113,5 @@ li {
         background: var(--clr-list--dark);
       }
     }
-
 }
 
