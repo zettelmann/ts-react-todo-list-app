@@ -1,9 +1,10 @@
 .tasks {
-
-  transform: translateY(calc(var(--base-unit) * -4));
-
+  margin-top: calc(var(--base-unit) * -4);
+  
   p {
     text-align: center;
-    margin-top: calc(var(--base-unit) * 1.5);
+    margin-top: var(--base-unit);
+    padding-bottom: calc(var(--base-unit) * 2);
   }
 }
+

@@ -9,6 +9,8 @@ form {
   max-width: calc((2 * var(--base-unit)) + 54rem);
   margin: 0 auto;
   height: calc(2 * var(--base-unit));
+  box-shadow: var(--shaddow);
+
 
   display: flex;
 

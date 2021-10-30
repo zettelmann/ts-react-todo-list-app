@@ -8,8 +8,8 @@ type TaskObj = {
   removeTask: (id: string) => void;
   completeTask: (id: string) => void;
   clearTasks: () => void;
-  filterTasks: (filterValue: string) => void
-
+  filterTasks: (filterValue: string) => void;
+  setTasksDnD: (task: Task[]) => void;
 };
 
 export const TaskContext = React.createContext<TaskObj>({
@@ -19,8 +19,8 @@ export const TaskContext = React.createContext<TaskObj>({
   removeTask: () => {},
   completeTask: () => {},
   clearTasks: () => {},
-  filterTasks: () => {}
-
+  filterTasks: () => {},
+  setTasksDnD: () => {}
 });
 
 const TaskContextProvider: React.FC = props => {
@@ -72,7 +72,8 @@ const TaskContextProvider: React.FC = props => {
     removeTask: removeTaskHandler,
     completeTask: completeTaskHandler,
     clearTasks: clearTaskHandler,
-    filterTasks: setFilterHandler
+    filterTasks: setFilterHandler,
+    setTasksDnD: setTaskList
   }
 
   return (

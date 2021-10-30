@@ -4,9 +4,10 @@
   align-items: center;
   height: calc(2 * var(--base-unit));
   margin: 0 var(--base-unit);
-  border-bottom-left-radius: var(--radius);
-  border-bottom-right-radius: var(--radius);
+  border-radius: var(--radius);
+  box-shadow: var(--shaddow);
 }
+
 
 section {
   max-width: calc((2 * var(--base-unit)) + 54rem);
