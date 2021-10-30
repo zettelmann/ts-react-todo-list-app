@@ -3,7 +3,7 @@ import styles from './TaskFilter.module.scss';
 import { ThemeContext } from '../context/theme-context';
 import { TaskContext } from '../context/task-context';
 
-const TaskFilter = () => {
+const TaskFilter: React.FC = () => {
   const themeContext = useContext(ThemeContext);
   const { filterTasks, filteredValue } = useContext(TaskContext);
 

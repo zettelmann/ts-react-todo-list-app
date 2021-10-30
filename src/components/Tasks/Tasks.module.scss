@@ -6,5 +6,31 @@
     margin-top: var(--base-unit);
     padding-bottom: calc(var(--base-unit) * 2);
   }
+ 
+  .welcome {
+    text-align: center;
+    margin: calc(var(--base-unit) * 3) auto;
+    max-width: 54rem;
+
+
+    h2 {
+      text-transform: uppercase;
+    }
+
+    h3 {
+      margin-top: calc(var(--base-unit) * .125);
+      padding: 0 var(--base-unit);
+      font-size: clamp(1.8rem, 3vw, 2.4rem);
+
+
+    }
+
+    p {
+      margin-top: calc(var(--base-unit) * .5);
+      padding: 0 var(--base-unit);
+    }
+    
+  }
+   
 }
 

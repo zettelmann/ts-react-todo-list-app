@@ -9,7 +9,8 @@
 
 %button {
   cursor: pointer;
-  font: inherit;
+  font-family: inherit;
+  font-size: clamp(1.2rem, 3vw, 1.4rem);
   color: inherit;
   width: auto;
   height: 4.2rem;
@@ -24,6 +25,11 @@
 section {
   max-width: calc((2 * var(--base-unit)) + 54rem);
   margin: 0 auto;
+
+  h3 {
+    font-family: inherit;
+    font-size: clamp(1.2rem, 3vw, 1.4rem);
+  }
 
   &.light {
     div {
