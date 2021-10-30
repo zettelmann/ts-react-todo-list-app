@@ -5,7 +5,6 @@
   height: calc(2 * var(--base-unit));
   margin: 0 var(--base-unit);
   border-radius: var(--radius);
-  box-shadow: var(--shaddow);
 }
 
 %button {
@@ -30,6 +29,7 @@ section {
     div {
       @extend %container;
       background: var(--clr-list--light);
+      box-shadow: var(--shaddow--light);
     }
 
     button {
@@ -44,6 +44,7 @@ section {
     div {
       @extend %container;
       background: var(--clr-list--dark);
+      box-shadow: var(--shaddow--dark);
     }
     button {
       @extend %button;

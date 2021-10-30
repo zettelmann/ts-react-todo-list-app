@@ -52,17 +52,7 @@ const TaskContextProvider: React.FC = props => {
 
   const setFilterHandler = (filteredValue: string) => {
     setFilter(filteredValue)
-
-/* 
-    if(filterValue === "completed") {
-      setTaskList(prevTaskList => prevTaskList.filter(task => task.completed))
-    }
-    if(filterValue === "active") {
-      setTaskList(prevTaskList => prevTaskList.filter(task => !task.completed))
-    }
-     */
   }
-  console.log(filter);
 
 
   const contextValue = {

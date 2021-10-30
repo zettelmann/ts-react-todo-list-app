@@ -6,15 +6,12 @@ import TaskList from './TaskList'
 import TaskContextProvider from '../context/task-context';
 
 const Tasks = () => {
-
-
   return (
     <main className={styles.tasks}>
       <TaskContextProvider>
         <TaskInput />
-        <section></section>
-          <TaskList />
-          <TaskFilter />
+            <TaskList />
+            <TaskFilter />
       </TaskContextProvider>
       <p>Drag and drop to reorder list</p>
     </main>

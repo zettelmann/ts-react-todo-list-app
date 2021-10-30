@@ -5,7 +5,8 @@
   --bg-active: #3A7CFD;
   --base-unit: 2.4rem;
   --radius: 5px;
-  --shaddow: 0 35px 25px -18px #4c4c553a;
+  --shaddow--light: 0 35px 50px -15px #c2c3d6;
+  --shaddow--dark: 0 35px 50px -15px #00000080;
   --transition: all .3s ease-in;
 
   --clr-bg--light: #F2F2F2;

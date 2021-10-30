@@ -21,8 +21,6 @@ const ThemeContextProvider: React.FC = props => {
     }
   }
 
-  console.log(theme);
-
   const contextValue = {
     theme: theme,
     setTheme: setThemeHandler
