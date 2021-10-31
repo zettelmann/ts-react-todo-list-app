@@ -1,4 +1,4 @@
-@import '../../breakpoints.scss';
+@import "../../breakpoints.scss";
 
 %container {
   display: flex;
@@ -20,7 +20,6 @@
   background: none;
   border: none;
   transition: var(--transition);
-  
 }
 
 @mixin buttonLargeBreakpoint {
@@ -54,7 +53,7 @@ section {
       &:hover {
         color: var(--clr-font-secondary--light);
       }
-  
+
       &.selected {
         color: var(--bg-active);
       }
@@ -76,18 +75,10 @@ section {
       &:hover {
         color: var(--clr-font-secondary--dark);
       }
-  
+
       &.selected {
         color: var(--bg-active);
       }
     }
   }
-
 }
-
-
-
-
-
-  
-

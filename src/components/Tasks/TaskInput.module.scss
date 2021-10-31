@@ -1,14 +1,14 @@
-@import '../../breakpoints.scss';
+@import "../../breakpoints.scss";
 
 %circle {
   position: absolute;
-  top: calc(var(--base-unit) * .55);
+  top: calc(var(--base-unit) * 0.55);
   left: calc(var(--base-unit) * 1.8);
   height: 20px;
   width: 20px;
   border-radius: 100%;
   @media (min-width: $bp-large) {
-    top: calc(var(--base-unit) * .9);
+    top: calc(var(--base-unit) * 0.9);
   }
 }
 
@@ -22,7 +22,6 @@
   padding-left: calc(var(--base-unit) * 2.15);
 }
 
-
 form {
   max-width: calc((2 * var(--base-unit)) + 54rem);
   margin: 0 auto;
@@ -35,18 +34,16 @@ form {
     height: calc(2.75 * var(--base-unit));
   }
 
-  
   &.light {
     span {
       @extend %circle;
       border: 1px solid var(--clr-stroke--light);
     }
-    
+
     input {
       @extend %input;
       color: var(--clr-font-secondary--light);
       background: var(--clr-list--light);
-
 
       &::placeholder {
         color: var(--clr-font-primary--light);
@@ -67,7 +64,7 @@ form {
       @extend %input;
       color: var(--clr-font-secondary--dark);
       background: var(--clr-list--dark);
-      
+
       &::placeholder {
         color: var(--clr-font-primary--dark);
       }

@@ -1,4 +1,4 @@
-@import '../../breakpoints.scss';
+@import "../../breakpoints.scss";
 
 %container {
   display: flex;
@@ -25,9 +25,7 @@
   background: none;
   border: none;
   transition: var(--transition);
-
 }
-
 
 section {
   max-width: calc((2 * var(--base-unit)) + 54rem);
@@ -71,6 +69,4 @@ section {
     padding: 2rem;
     font-weight: 400;
   }
-
-
 }

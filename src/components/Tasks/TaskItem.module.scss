@@ -1,26 +1,28 @@
-@import '../../breakpoints.scss';
+@import "../../breakpoints.scss";
 
 %circle {
   margin-left: calc(var(--base-unit) * 0.8325);
-  width: 2rem; 
-  height: 2rem; 
+  width: 2rem;
+  height: 2rem;
   border-radius: 100%;
 
-
   &.completed {
-    background: url('../../assets/icon-check.svg') 51% 56% no-repeat, var(--bg-gradient) ;
+    background: url("../../assets/icon-check.svg") 51% 56% no-repeat,
+      var(--bg-gradient);
   }
 }
 
 %circleHover {
-  height: 2rem;
-  width: 2rem;
-  border-radius: 100%;
-  background: var(--bg-gradient);
+  @media (hover: hover) {
+    height: 2rem;
+    width: 2rem;
+    border-radius: 100%;
+    background: var(--bg-gradient);
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 %button {
@@ -29,7 +31,7 @@
   border: none;
   cursor: pointer;
 
-  background: no-repeat center url('../../assets/icon-cross.svg');
+  background: no-repeat center url("../../assets/icon-cross.svg");
   background-size: 1.2rem;
 
   @media (min-width: $bp-large) {
@@ -47,7 +49,6 @@ li {
     height: calc(2.75 * var(--base-unit));
   }
 
-
   &:first-child {
     border-top-left-radius: var(--radius);
     border-top-right-radius: var(--radius);
@@ -59,15 +60,12 @@ li {
   }
 
   &.light {
-
     background: var(--clr-list--light);
     border-bottom: 1px solid var(--clr-stroke--light);
-
 
     span {
       @extend %circle;
       border: 1px solid var(--clr-stroke--light);
-
     }
 
     h2 {
@@ -83,14 +81,14 @@ li {
   &.dark {
     background: var(--clr-list--dark);
     border-bottom: 1px solid var(--clr-stroke--dark);
-    
+
     span {
       @extend %circle;
       border: 1px solid var(--clr-stroke--dark);
     }
     h2 {
       color: var(--clr-font-secondary--dark);
-      
+
       &.completed {
         text-decoration: line-through;
         color: var(--clr-font-completed--dark);
@@ -103,50 +101,45 @@ li {
     @media (min-width: $bp-large) {
       display: none;
     }
-
   }
 }
 
 li {
   &.light:hover span {
-      @extend %circleHover;
+    @extend %circleHover;
 
-      &::after {
-        content: '';
-        height: 1.4rem;
-        width:  1.4rem;
-        border-radius: 100%;
-        background: var(--clr-list--light);
-      }
+    &::after {
+      content: "";
+      height: 1.4rem;
+      width: 1.4rem;
+      border-radius: 100%;
+      background: var(--clr-list--light);
     }
+  }
 
   &.dark:hover span {
     @extend %circleHover;
-      &::after {
-        content: '';
-        height: 1.4rem;
-        width:  1.4rem;
-        border-radius: 100%;
-        background: var(--clr-list--dark);
+    &::after {
+      content: "";
+      height: 1.4rem;
+      width: 1.4rem;
+      border-radius: 100%;
+      background: var(--clr-list--dark);
+    }
+  }
+
+  &:hover {
+    button {
+      @extend %button;
+      @media (min-width: $bp-large) {
+        display: block;
+        width: 4.8rem;
+        height: 4.2rem;
+        border: none;
+        cursor: pointer;
+
+        background: no-repeat center url("../../assets/icon-cross.svg");
       }
     }
-
-    &:hover {
-      button {
-        @extend %button;
-        @media (min-width: $bp-large) {
-
-          display: block;
-          width: 4.8rem;
-          height: 4.2rem;
-          border: none;
-          cursor: pointer;
-      
-          background: no-repeat center url('../../assets/icon-cross.svg');      
-        }
-      }
-    }
+  }
 }
-
-
-
