@@ -14,8 +14,16 @@ Users should be able to:
 - Toggle light and dark mode
 - **Bonus**: Drag and drop to reorder items on the list
 
-[&rarr; Here you can try the hosted solution](https://brave-leavitt-8cf002.netlify.app/).
+### [&rarr; Here you can try the hosted solution](https://brave-leavitt-8cf002.netlify.app/).
 
+## Design
+### Mobile Design
+![](https://raw.githubusercontent.com/zettelmann/ts-react-todo-list-app/main/designs/mobile-design-dark.jpg)
+![](https://raw.githubusercontent.com/zettelmann/ts-react-todo-list-app/main/designs/mobile-design-light.jpg)
+
+### Desktop Design
+![](https://raw.githubusercontent.com/zettelmann/ts-react-todo-list-app/main/designs/active-states-dark.jpg)
+![](https://raw.githubusercontent.com/zettelmann/ts-react-todo-list-app/main/designs/active-states-light.jpg)
 ## Available Scripts
 
 In the project directory, you can run:
