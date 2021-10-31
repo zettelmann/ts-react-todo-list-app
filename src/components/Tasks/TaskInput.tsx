@@ -24,7 +24,7 @@ const TaskInput: React.FC = () => {
       className={styles[`${themeContext.theme}`]}
       onSubmit={submitHandler}
     >  
-   <span></span>
+   <span />
       <input 
         placeholder="Create a new todo..."
         type="text" 
