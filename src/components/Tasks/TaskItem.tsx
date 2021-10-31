@@ -34,7 +34,7 @@ const TaskItem: React.FC<TaskItemObj> = props => {
       onClick={props.onCompleteTask}
     >
 
-      <span className={props.completed ? `${styles.completed}` : ''} />
+      <input type="checkbox" className={props.completed ? `${styles.completed}` : ''} />
       <h2 className={props.completed ? `${styles.completed}` : ''}>{props.text}</h2>
       <button 
         id="removeTask" aria-label="remove task"

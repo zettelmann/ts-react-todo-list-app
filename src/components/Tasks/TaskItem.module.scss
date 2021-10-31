@@ -1,6 +1,7 @@
 @import "../../breakpoints.scss";
 
-%circle {
+%checkbox {
+  appearance: none;
   margin-left: calc(var(--base-unit) * 0.8325);
   width: 2rem;
   height: 2rem;
@@ -34,8 +35,12 @@
   background: no-repeat center url("../../assets/icon-cross.svg");
   background-size: 1.2rem;
 
-  @media (min-width: $bp-large) {
-    background-size: 15rem;
+  &:focus {
+    opacity: 1;
+  }
+
+  @media (hover: hover) {
+    opacity: 0;
   }
 }
 
@@ -63,8 +68,8 @@ li {
     background: var(--clr-list--light);
     border-bottom: 1px solid var(--clr-stroke--light);
 
-    span {
-      @extend %circle;
+    input {
+      @extend %checkbox;
       border: 1px solid var(--clr-stroke--light);
     }
 
@@ -82,8 +87,8 @@ li {
     background: var(--clr-list--dark);
     border-bottom: 1px solid var(--clr-stroke--dark);
 
-    span {
-      @extend %circle;
+    input {
+      @extend %checkbox;
       border: 1px solid var(--clr-stroke--dark);
     }
     h2 {
@@ -98,9 +103,6 @@ li {
 
   button {
     @extend %button;
-    @media (min-width: $bp-large) {
-      display: none;
-    }
   }
 }
 
@@ -132,7 +134,7 @@ li {
     button {
       @extend %button;
       @media (min-width: $bp-large) {
-        display: block;
+        opacity: 1;
         width: 4.8rem;
         height: 4.2rem;
         border: none;
