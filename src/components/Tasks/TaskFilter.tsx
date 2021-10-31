@@ -15,16 +15,19 @@ const TaskFilter: React.FC = () => {
     <section className={styles[`${themeContext.theme}`]}>
       <div>
         <button 
+          id="all" aria-label="all"
           value="all" 
           onClick={setFilterHandler}
           className={filteredValue === 'all' ? `${styles.selected}` : ''}
         >All</button>
         <button 
+          id="active" aria-label="active"
           value="active"
           onClick={setFilterHandler}
           className={filteredValue === 'active' ? `${styles.selected}` : ''}
         >Active</button>
         <button 
+          id="completed" aria-label="completed"
           value="completed" 
           onClick={setFilterHandler}
           className={filteredValue === 'completed' ? `${styles.selected}` : ''}

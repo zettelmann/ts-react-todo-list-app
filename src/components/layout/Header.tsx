@@ -13,7 +13,7 @@ const Header: React.FC = () => {
     <header className={styles[`${themeContext.theme}`]}>
       <div className={styles.container}>
         <h1>TODO</h1>
-        <button title="change theme" onClick={setThemeHandler} />
+        <button id="changeTheme" aria-label="change theme" onClick={setThemeHandler} />
       </div>
     </header>
   )

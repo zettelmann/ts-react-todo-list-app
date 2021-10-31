@@ -36,7 +36,10 @@ const TaskItem: React.FC<TaskItemObj> = props => {
 
       <span className={props.completed ? `${styles.completed}` : ''} />
       <h2 className={props.completed ? `${styles.completed}` : ''}>{props.text}</h2>
-      <button title="cross" onClick={props.onRemoveTask} />
+      <button 
+        id="removeTask" aria-label="remove task"
+        onClick={props.onRemoveTask} 
+      />
     </li>
   )
 }

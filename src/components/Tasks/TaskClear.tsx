@@ -13,7 +13,7 @@ const TaskClear = () => {
     <section className={styles[`${themeContext.theme}`]}>
       <div>
         <h3>{taskLeft.length} items left</h3>
-        <button onClick={taskContext.clearTasks}>Clear Completed</button>
+        <button id="clearComplete" aria-label="clear complete" onClick={taskContext.clearTasks}>Clear Completed</button>
       </div>
     </section>
   );
